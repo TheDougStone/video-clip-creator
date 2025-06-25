@@ -16,10 +16,10 @@ jobs:
         os: [windows-latest, macos-latest, ubuntu-latest]
         
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     
     - name: Set up Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
         python-version: '3.9'
         
@@ -46,21 +46,21 @@ jobs:
         
     - name: Upload artifacts (Windows)
       if: matrix.os == 'windows-latest'
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: VideoClipCreator-Windows
         path: dist/VideoClipCreator.exe
         
     - name: Upload artifacts (macOS)
       if: matrix.os == 'macos-latest'
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: VideoClipCreator-macOS
         path: dist/VideoClipCreator
         
     - name: Upload artifacts (Linux)
       if: matrix.os == 'ubuntu-latest'
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: VideoClipCreator-Linux
         path: dist/VideoClipCreator
