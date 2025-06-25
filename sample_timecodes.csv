@@ -1,0 +1,4 @@
+Start,End,OutputName
+00:00:10,00:00:20,first_clip
+00:01:30,00:02:00,second_clip
+00:02:15,00:02:45,third_clip 
